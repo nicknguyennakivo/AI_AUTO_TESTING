@@ -1,0 +1,181 @@
+{
+  "actions": [
+    {
+      "type": "fill",
+      "target": "username input",
+      "value": "admin",
+      "clear": true
+    },
+    {
+      "type": "fill",
+      "target": "password input",
+      "value": "admin",
+      "clear": true
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "LOG IN",
+      "assertion": "visible"
+    },
+    {
+      "type": "click",
+      "target": "Log In button"
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "Data Protection",
+      "assertion": "visible"
+    },
+    {
+      "type": "click",
+      "target": "Data Protection menu"
+    },
+    {
+      "type": "click",
+      "target": "Create new job"
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "Backup for Microsoft 365",
+      "assertion": "visible"
+    },
+    {
+      "type": "select",
+      "target": "job type",
+      "value": "Backup for Microsoft 365"
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "Sources",
+      "assertion": "visible"
+    },
+    {
+      "type": "fill",
+      "target": "source search input",
+      "value": "Nguyen Van Phuc 02",
+      "clear": true
+    },
+    {
+      "type": "press",
+      "value": "Enter"
+    },
+    {
+      "type": "fill",
+      "target": "source search input",
+      "value": "Nguyen Van Phuc 02",
+      "clear": true
+    },
+    {
+      "type": "press",
+      "value": "Enter"
+    },
+    {
+      "type": "click",
+      "target": "all matching sources"
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "the selected sources to be visible in the right panel",
+      "assertion": "visible"
+    },
+    {
+      "type": "click",
+      "target": "Next"
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "Destination",
+      "assertion": "visible"
+    },
+    {
+      "type": "click",
+      "target": "destination repository dropdown"
+    },
+    {
+      "type": "select",
+      "target": "destination repository dropdown",
+      "value": "365_Backup"
+    },
+    {
+      "type": "click",
+      "target": "Next"
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "Schedule",
+      "assertion": "visible"
+    },
+    {
+      "type": "click",
+      "target": "Next"
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "Options",
+      "assertion": "visible"
+    },
+    {
+      "type": "fill",
+      "target": "Job Name field",
+      "value": "",
+      "clear": true
+    },
+    {
+      "type": "fill",
+      "target": "Job Name field",
+      "value": "test_vm",
+      "clear": true
+    },
+    {
+      "type": "click",
+      "target": "Finish & Run button"
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "Run this job?",
+      "assertion": "visible"
+    },
+    {
+      "type": "click",
+      "target": "Run button"
+    },
+    {
+      "type": "instruction",
+      "description": "Wait until the job status is not \"Running\""
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "Completed",
+      "assertion": "visible"
+    },
+    {
+      "type": "click",
+      "target": "Settings menu"
+    },
+    {
+      "type": "click",
+      "target": "Repositories section"
+    },
+    {
+      "type": "select",
+      "target": "Repositories",
+      "value": "365_Backup"
+    },
+    {
+      "type": "expect",
+      "target": "text",
+      "value": "Nguyen Van Phuc 02",
+      "assertion": "visible"
+    }
+  ]
+}

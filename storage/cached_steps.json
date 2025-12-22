@@ -1,0 +1,37 @@
+[
+  {
+    "step": 1,
+    "instruction": "Type \"admin\" on the username input.",
+    "original": "Type \"admin\" on the username input.",
+    "status": "success",
+    "result": "success=True message='Action [type] performed successfully on selector: xpath=/html/body[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/input[1]' action='Username input field'",
+    "screenshot_before": "./storage/screenshots/step_001_before.png",
+    "screenshot_after": "./storage/screenshots/step_001_after.png"
+  },
+  {
+    "step": 2,
+    "instruction": "Type \"admin\" on password input.",
+    "original": "Type \"admin\" on password input.",
+    "status": "success",
+    "result": "success=True message='Action [type] performed successfully on selector: xpath=/html/body[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/div[2]/div[1]/input[1]' action='Password input field'",
+    "screenshot_before": "./storage/screenshots/step_002_before.png",
+    "screenshot_after": "./storage/screenshots/step_002_after.png"
+  },
+  {
+    "step": 3,
+    "instruction": "Expect \"LOG IN\" to be visible.",
+    "original": "Expect \"LOG IN\" to be visible.",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[3]/div[2]/em[1]/button[1]', description='The LOG IN button to submit credentials.', backend_node_id=None, method='click', arguments=[])]",
+    "screenshot_before": "./storage/screenshots/step_003_before.png",
+    "screenshot_after": "./storage/screenshots/step_003_after.png"
+  },
+  {
+    "step": 4,
+    "instruction": "Click the \"Log In\" button.",
+    "original": "Click the \"Log In\" button.",
+    "status": "failed",
+    "error": "'Stagehand' object has no attribute 'capture_tree'",
+    "screenshot_error": "./storage/screenshots/step_004_error.png"
+  }
+]
