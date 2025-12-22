@@ -268,6 +268,4 @@ Click button "Next"
 5. **Idempotent steps only**
 
 ---
-
 **Filename:** `stagehand-prompt-style-guide.md`
-

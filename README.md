@@ -20,16 +20,15 @@ This project provides an automated QA testing system powered by Stagehand AI tha
 
 ## Documentation
 
-- [USAGE_GUIDE.md](./USAGE_GUIDE.md) - How to write test steps and run tests
-- [NO_ACTION_INVENTION.md](./NO_ACTION_INVENTION.md) - **IMPORTANT: AI never invents steps not in steps.txt**
-- [PRESS_ENTER_SUPPORT.md](./PRESS_ENTER_SUPPORT.md) - Support for keyboard actions (Press Enter, Tab, etc.)
-- [HYBRID_EXECUTION_STRATEGY.md](./HYBRID_EXECUTION_STRATEGY.md) - Primary execution strategy with page.act()
-- [AGENT_EXECUTE_FALLBACK.md](./AGENT_EXECUTE_FALLBACK.md) - Advanced agent.execute() fallback for recovery
-- [AGENT_FALLBACK_VALIDATION_FIX.md](./AGENT_FALLBACK_VALIDATION_FIX.md) - Fix for fallback validation logic
-- [AUTO_VERIFICATION_GUIDE.md](./AUTO_VERIFICATION_GUIDE.md) - Auto-verification feature
-- [FIX_SILENT_FAILURES.md](./FIX_SILENT_FAILURES.md) - How failures are detected
-- [AGENT_FALLBACK_GUIDE.md](./AGENT_FALLBACK_GUIDE.md) - Intelligent agent recovery overview
-- [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) - Common issues and solutions
+Most standalone docs were removed. Use the inline comments and these entry points:
+- `app/utils/step_converter.py` – Step conversion rules, action schema, and natural-language mapping
+- `app/services/main.py` – Execution flow, wait logic, hybrid/agent fallback behavior
+- `storage/steps.txt` – Author your test steps here
+- `storage/actions.json` and `storage/actions_natural.txt` – Generated outputs for review
+
+Notes:
+- The converter strictly avoids inventing steps and preserves locator/instruction steps verbatim.
+- Supports navigate, fill, click, press, expect, select, and instruction action types.
 
 ## 🚀 Quick Start
 
