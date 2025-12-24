@@ -1,0 +1,56 @@
+# testcase name
+@testcase backup_m365_basic
+
+#job config wait and job_poll_interval
+@max_wait 30
+@poll_interval 2
+
+
+# Login
+Type "admin" on the username input.
+Type "admin" on password input.
+Expect "Log In" to be visible.
+Click the "Log In" button.
+Expect "Data Protection" to be visible.
+
+# Create backup job
+Open the Data Protection menu.
+Click create a new job.
+Expect "Backup for Microsoft 365" to be visible.
+Select "Backup for Microsoft 365" as the job type.
+Expect "Sources" to be visible.
+
+# Source step
+Type "danh07emptygr" on the source search input.
+Press Enter
+Select the checkbox labeled "danh07emptygr" Group Mailboxes.
+Expect "danh07emptygr" Group Mailboxes to be visible in the right panel.
+Click Next.
+Expect "Destination" to be visible.
+
+# Destination step
+Click the destination repository dropdown.
+Select "365_Backup".
+Click Next.
+Expect "Schedule" to be visible.
+
+# Schedule step
+Ensure "Do not schedule, run on demand" is selected.
+Click Next.
+Expect "Options" to be visible.
+
+# Options step
+Type "test_365" on the Job Name field.
+Click the "Finish & Run" button.
+Expect "Run this job?" to be visible.
+
+# Run job
+Click the "Run" button.
+Wait until text "Running" is not visible for job "test_365"
+Expect the job status to be "Completed".
+
+# Verify job
+Click the Settings menu.
+Click the Repositories section.
+Select "365_Backup".
+Expect "danh07emptygr" Group Mailboxes to be visible in the backup list.
