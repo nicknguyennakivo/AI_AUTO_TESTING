@@ -19,11 +19,12 @@ def create_app() -> Flask:
 
     @click.command()
     @click.option("--mode", default="ai", help="ai or replay")
+    @click.option("--testcase", default="./storage/testcase/create_backup_job_365.txt", help="Path to the steps file")
     @with_appcontext
-    def process(mode):
+    def process(mode, testcase):
         initLogger()
         from app.services.main import MainService
-        asyncio.run(MainService().process(mode=mode))
+        asyncio.run(MainService().process(mode=mode, test_case=testcase))
 
 
     @click.command()

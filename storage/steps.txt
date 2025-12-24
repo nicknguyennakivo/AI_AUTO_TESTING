@@ -2,31 +2,29 @@
 @testcase backup_m365_basic
 
 #job config wait and job_poll_interval
-@max_wait 360
-@poll_interval 5
+@max_wait 30
+@poll_interval 2
 
 
 # Login
 Type "admin" on the username input.
 Type "admin" on password input.
-Expect "LOG IN" to be visible.
+Expect "Log In" to be visible.
 Click the "Log In" button.
+Expect "Data Protection" to be visible.
 
 # Create backup job
-Expect "Data Protection" to be visible.
 Open the Data Protection menu.
-Click the '+' icon in the left sidebar next to "Jobs".
+Click create a new job.
 Expect "Backup for Microsoft 365" to be visible.
 Select "Backup for Microsoft 365" as the job type.
 Expect "Sources" to be visible.
 
 # Source step
-Type "Nguyen Van Phuc 02" on the source search input.
+Type "danh07emptygr" on the source search input.
 Press Enter
-Select the checkbox labeled "Nguyen Van Phuc 02" mailbox.
-Select the checkbox labeled "Nguyen Van Phuc 02" OneDrive.
-Expect "Nguyen Van Phuc 02" mailbox to be visible in the right panel.
-Expect "Nguyen Van Phuc 02" OneDrive to be visible in the right panel.
+Select the checkbox labeled "danh07emptygr" Group Mailboxes.
+Expect "danh07emptygr" Group Mailboxes to be visible in the right panel.
 Click Next.
 Expect "Destination" to be visible.
 
@@ -42,7 +40,7 @@ Click Next.
 Expect "Options" to be visible.
 
 # Options step
-Type "test_vm" on the Job Name field.
+Type "test_365" on the Job Name field.
 Click the "Finish & Run" button.
 Expect "Run this job?" to be visible.
 
@@ -55,5 +53,4 @@ Expect the job status to be "Completed".
 Click the Settings menu.
 Click the Repositories section.
 Select "365_Backup".
-Expect "Nguyen Van Phuc 02" Mailbox to be visible in the backup list.
-Expect "Nguyen Van Phuc 02" OneDrive to be visible in the backup list.
+Expect "danh07emptygr" Group Mailboxes to be visible in the backup list.

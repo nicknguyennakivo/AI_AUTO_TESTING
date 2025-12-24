@@ -53,11 +53,21 @@ Edit `.env` to provide actual values.
 
 ### 3. Install Dependencies
 
-> ⚠️ Requires [Poetry](https://python-poetry.org/docs/#installation)
+> Requires Poetry. Install from https://python-poetry.org/docs/#installation
+
+- Linux/macOS:
 
 ```bash
 sudo apt-get update && sudo apt-get install -y libpq-dev python3-dev build-essential
+poetry install
+```
 
+- Windows (PowerShell):
+
+```powershell
+python --version
+pip install poetry
+poetry --version
 poetry install
 ```
 
@@ -67,4 +77,12 @@ poetry install
 
 ```bash
 poetry run python manage.py
+```
+
+### Run Test Case
+
+Place your test case file (e.g., `create_backup_job_365.txt`) at `./storage/testcase/create_backup_job_365.txt`, then run:
+
+```bash
+poetry run flask process --testcase=create_backup_job_365.txt --mode=ai
 ```

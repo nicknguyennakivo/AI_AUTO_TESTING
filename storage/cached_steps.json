@@ -19,10 +19,10 @@
   },
   {
     "step": 3,
-    "instruction": "Expect \"LOG IN\" to be visible.",
-    "original": "Expect \"LOG IN\" to be visible.",
+    "instruction": "Expect \"Log In\" to be visible.",
+    "original": "Expect \"Log In\" to be visible.",
     "status": "success",
-    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[3]/div[2]/em[1]/button[1]', description='The LOG IN button to submit credentials.', backend_node_id=None, method='click', arguments=[])]",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[3]/div[2]/em[1]/button[1]', description='The button to log in.', backend_node_id=None, method='click', arguments=[])]",
     "screenshot_before": "./storage/screenshots/step_003_before.png",
     "screenshot_after": "./storage/screenshots/step_003_after.png"
   },
@@ -30,8 +30,279 @@
     "step": 4,
     "instruction": "Click the \"Log In\" button.",
     "original": "Click the \"Log In\" button.",
-    "status": "failed",
-    "error": "'Stagehand' object has no attribute 'capture_tree'",
-    "screenshot_error": "./storage/screenshots/step_004_error.png"
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[3]/div[2]/em[1]/button[1]' action='Log In button'",
+    "screenshot_before": "./storage/screenshots/step_004_before.png",
+    "screenshot_after": "./storage/screenshots/step_004_after.png"
+  },
+  {
+    "step": 5,
+    "instruction": "Expect \"Data Protection\" to be visible.",
+    "original": "Expect \"Data Protection\" to be visible.",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[2]', description=\"The 'Data Protection' link in the navigation menu.\", backend_node_id=None, method='getByText', arguments=['Data Protection'])]",
+    "screenshot_before": "./storage/screenshots/step_005_before.png",
+    "screenshot_after": "./storage/screenshots/step_005_after.png"
+  },
+  {
+    "step": 6,
+    "instruction": "Open the Data Protection menu.",
+    "original": "Open the Data Protection menu.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[2]' action='StaticText: Data Protection'",
+    "screenshot_before": "./storage/screenshots/step_006_before.png",
+    "screenshot_after": "./storage/screenshots/step_006_after.png"
+  },
+  {
+    "step": 7,
+    "instruction": "Click create a new job.",
+    "original": "Click create a new job.",
+    "status": "success_via_agent_execute",
+    "primary_error": "Action failed based on string representation: success=False message='No observe results found for action' action='Click create a new job.'",
+    "agent_actions": [
+      {
+        "type": "click",
+        "x": 491,
+        "y": 138,
+        "button": "left"
+      }
+    ],
+    "agent_steps_count": 1,
+    "screenshot_before": "./storage/screenshots/step_007_before.png",
+    "screenshot_after": "./storage/screenshots/step_007_agent_fallback.png"
+  },
+  {
+    "step": 8,
+    "instruction": "Expect \"Backup for Microsoft 365\" to be visible.",
+    "original": "Expect \"Backup for Microsoft 365\" to be visible.",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[12]/div[4]/div[1]/div[1]/a[7]', description=\"The text 'Backup for Microsoft 365' is visible on the page.\", backend_node_id=None, method='expect', arguments=['toBeVisible'])]",
+    "screenshot_before": "./storage/screenshots/step_008_before.png",
+    "screenshot_after": "./storage/screenshots/step_008_after.png"
+  },
+  {
+    "step": 9,
+    "instruction": "Select \"Backup for Microsoft 365\" as the job type.",
+    "original": "Select \"Backup for Microsoft 365\" as the job type.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[12]/div[4]/div[1]/div[1]/a[7]' action=\"Selects 'Backup for Microsoft 365' as the job type.\"",
+    "screenshot_before": "./storage/screenshots/step_009_before.png",
+    "screenshot_after": "./storage/screenshots/step_009_after.png"
+  },
+  {
+    "step": 10,
+    "instruction": "Expect \"Sources\" to be visible.",
+    "original": "Expect \"Sources\" to be visible.",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[2]/div[1]/a[1]', description=\"The text '1. Sources' indicating the current step in a wizard.\", backend_node_id=None, method='expect', arguments=['toBeVisible'])]",
+    "screenshot_before": "./storage/screenshots/step_010_before.png",
+    "screenshot_after": "./storage/screenshots/step_010_after.png"
+  },
+  {
+    "step": 11,
+    "instruction": "Type \"danh07emptygr\" on the source search input.",
+    "original": "Type \"danh07emptygr\" on the source search input.",
+    "status": "success",
+    "result": "success=True message='Action [type] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]' action='The search input field for sources.'",
+    "screenshot_before": "./storage/screenshots/step_011_before.png",
+    "screenshot_after": "./storage/screenshots/step_011_after.png"
+  },
+  {
+    "step": 12,
+    "instruction": "Press Enter",
+    "original": "Press Enter",
+    "status": "success",
+    "result": "success=True message='Action [press] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[7]/div[4]/em[1]/button[1]' action=\"Press Enter to activate the 'Next' button and proceed to the next step in the wizard.\"",
+    "screenshot_before": "./storage/screenshots/step_012_before.png",
+    "screenshot_after": "./storage/screenshots/step_012_after.png"
+  },
+  {
+    "step": 13,
+    "instruction": "Select the checkbox labeled \"danh07emptygr\" Group Mailboxes.",
+    "original": "Select the checkbox labeled \"danh07emptygr\" Group Mailboxes.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[5]/td[1]/div[1]/input[1]' action=\"Checkbox labeled 'danh07emptygr' within the context of Group Mailboxes.\"",
+    "screenshot_before": "./storage/screenshots/step_013_before.png",
+    "screenshot_after": "./storage/screenshots/step_013_after.png"
+  },
+  {
+    "step": 14,
+    "instruction": "Expect \"danh07emptygr\" Group Mailboxes to be visible in the right panel.",
+    "original": "Expect \"danh07emptygr\" Group Mailboxes to be visible in the right panel.",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[5]/td[1]/div[1]', description=\"The 'danh07emptygr' item listed under 'Group Mailboxes' in the table.\", backend_node_id=None, method='getByText', arguments=['danh07emptygr'])]",
+    "screenshot_before": "./storage/screenshots/step_014_before.png",
+    "screenshot_after": "./storage/screenshots/step_014_after.png"
+  },
+  {
+    "step": 15,
+    "instruction": "Click Next.",
+    "original": "Click Next.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[7]/div[4]/em[1]/button[1]' action='Next button to proceed to the next step in the wizard.'",
+    "screenshot_before": "./storage/screenshots/step_015_before.png",
+    "screenshot_after": "./storage/screenshots/step_015_after.png"
+  },
+  {
+    "step": 16,
+    "instruction": "Expect \"Destination\" to be visible.",
+    "original": "Expect \"Destination\" to be visible.",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[2]/div[1]/a[2]', description=\"The 'Destination' step in the New Backup Job Wizard.\", backend_node_id=None, method='scrollIntoView', arguments=[])]",
+    "screenshot_before": "./storage/screenshots/step_016_before.png",
+    "screenshot_after": "./storage/screenshots/step_016_after.png"
+  },
+  {
+    "step": 17,
+    "instruction": "Click the destination repository dropdown.",
+    "original": "Click the destination repository dropdown.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]' action='Dropdown to select a target destination.'",
+    "screenshot_before": "./storage/screenshots/step_017_before.png",
+    "screenshot_after": "./storage/screenshots/step_017_after.png"
+  },
+  {
+    "step": 18,
+    "instruction": "Select \"365_Backup\".",
+    "original": "Select \"365_Backup\".",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[8]/div[1]/div[6]/div[1]/div[2]' action=\"Selects '365_Backup' as the target destination.\"",
+    "screenshot_before": "./storage/screenshots/step_018_before.png",
+    "screenshot_after": "./storage/screenshots/step_018_after.png"
+  },
+  {
+    "step": 19,
+    "instruction": "Click Next.",
+    "original": "Click Next.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[7]/div[4]/em[1]/button[1]' action=\"Click the 'Next' button to proceed to the next step in the wizard.\"",
+    "screenshot_before": "./storage/screenshots/step_019_before.png",
+    "screenshot_after": "./storage/screenshots/step_019_after.png"
+  },
+  {
+    "step": 20,
+    "instruction": "Expect \"Schedule\" to be visible.",
+    "original": "Expect \"Schedule\" to be visible.",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[2]/div[1]/a[3]', description=\"The text 'Schedule' is visible on the page, indicating the current step in a wizard or process.\", backend_node_id=None, method='expect', arguments=['13338', 'toBeVisible'])]",
+    "screenshot_before": "./storage/screenshots/step_020_before.png",
+    "screenshot_after": "./storage/screenshots/step_020_after.png"
+  },
+  {
+    "step": 21,
+    "instruction": "Ensure \"Do not schedule, run on demand\" is selected.",
+    "original": "Ensure \"Do not schedule, run on demand\" is selected.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]' action=\"Checkbox for 'Do not schedule, run on demand'\"",
+    "screenshot_before": "./storage/screenshots/step_021_before.png",
+    "screenshot_after": "./storage/screenshots/step_021_after.png"
+  },
+  {
+    "step": 22,
+    "instruction": "Click Next.",
+    "original": "Click Next.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[7]/div[4]/em[1]/button[1]' action=\"Click the 'Next' button to proceed to the next step in the wizard.\"",
+    "screenshot_before": "./storage/screenshots/step_022_before.png",
+    "screenshot_after": "./storage/screenshots/step_022_after.png"
+  },
+  {
+    "step": 23,
+    "instruction": "Expect \"Options\" to be visible.",
+    "original": "Expect \"Options\" to be visible.",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[2]/div[1]/a[4]', description=\"The 'Options' step in the New Backup Job Wizard.\", backend_node_id=None, method='expect', arguments=['beVisible'])]",
+    "screenshot_before": "./storage/screenshots/step_023_before.png",
+    "screenshot_after": "./storage/screenshots/step_023_after.png"
+  },
+  {
+    "step": 24,
+    "instruction": "Type \"test_365\" on the Job Name field.",
+    "original": "Type \"test_365\" on the Job Name field.",
+    "status": "success",
+    "result": "success=True message='Action [type] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[6]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]' action='The input field for the job name.'",
+    "screenshot_before": "./storage/screenshots/step_024_before.png",
+    "screenshot_after": "./storage/screenshots/step_024_after.png"
+  },
+  {
+    "step": 25,
+    "instruction": "Click the \"Finish & Run\" button.",
+    "original": "Click the \"Finish & Run\" button.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[7]/div[5]/em[1]/button[1]' action='Button to finish and run the job.'",
+    "screenshot_before": "./storage/screenshots/step_025_before.png",
+    "screenshot_after": "./storage/screenshots/step_025_after.png"
+  },
+  {
+    "step": 26,
+    "instruction": "Expect \"Run this job?\" to be visible.",
+    "original": "Expect \"Run this job?\" to be visible.",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[9]', description=\"The dialog box titled 'Run this job?' which is expected to be visible.\", backend_node_id=None, method='isVisible', arguments=[])]",
+    "screenshot_before": "./storage/screenshots/step_026_before.png",
+    "screenshot_after": "./storage/screenshots/step_026_after.png"
+  },
+  {
+    "step": 27,
+    "instruction": "Click the \"Run\" button.",
+    "original": "Click the \"Run\" button.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[9]/div[3]/div[1]/div[2]/em[1]/button[1]' action=\"Button to run the job within the 'Run this job?' dialog.\"",
+    "screenshot_before": "./storage/screenshots/step_027_before.png",
+    "screenshot_after": "./storage/screenshots/step_027_after.png"
+  },
+  {
+    "step": 28,
+    "instruction": "Wait until text \"Running\" is not visible for job \"test_365\"",
+    "original": "Wait until text \"Running\" is not visible for job \"test_365\"",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[9]/div[3]/div[1]/div[2]/em[1]/button[1]' action=\"Button to run the job within the 'Run this job?' dialog.\"",
+    "screenshot_before": "./storage/screenshots/step_028_before.png",
+    "screenshot_after": "./storage/screenshots/step_028_after.png"
+  },
+  {
+    "step": 29,
+    "instruction": "Expect the job status to be \"Completed\".",
+    "original": "Expect the job status to be \"Completed\".",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[3]/div[2]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[3]', description=\"The status of the job, which is expected to be 'Completed'.\", backend_node_id=None, method='locator.getByText', arguments=['Completed'])]",
+    "screenshot_before": "./storage/screenshots/step_029_before.png",
+    "screenshot_after": "./storage/screenshots/step_029_after.png"
+  },
+  {
+    "step": 30,
+    "instruction": "Click the Settings menu.",
+    "original": "Click the Settings menu.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[1]/div[1]/div[3]/div[9]/div[1]/div[2]' action='Click the Settings menu.'",
+    "screenshot_before": "./storage/screenshots/step_030_before.png",
+    "screenshot_after": "./storage/screenshots/step_030_after.png"
+  },
+  {
+    "step": 31,
+    "instruction": "Click the Repositories section.",
+    "original": "Click the Repositories section.",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[1]/div[1]/div[4]/div[1]/a[1]' action='Click the Repositories section.'",
+    "screenshot_before": "./storage/screenshots/step_031_before.png",
+    "screenshot_after": "./storage/screenshots/step_031_after.png"
+  },
+  {
+    "step": 32,
+    "instruction": "Select \"365_Backup\".",
+    "original": "Select \"365_Backup\".",
+    "status": "success",
+    "result": "success=True message='Action [click] performed successfully on selector: xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[4]/div[1]/div[2]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]' action='The cell containing the text \"365_Backup\" within a table row.'",
+    "screenshot_before": "./storage/screenshots/step_032_before.png",
+    "screenshot_after": "./storage/screenshots/step_032_after.png"
+  },
+  {
+    "step": 33,
+    "instruction": "Expect \"danh07emptygr\" Group Mailboxes to be visible in the backup list.",
+    "original": "Expect \"danh07emptygr\" Group Mailboxes to be visible in the backup list.",
+    "status": "success",
+    "result": "[ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[5]/td[2]', description=\"A 'danh07emptygr' Group Mailbox entry in the backup list.\", backend_node_id=None, method='getByText', arguments=['danh07emptygr']), ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[6]/td[2]', description=\"A 'danh07emptygr' Group Mailbox entry in the backup list.\", backend_node_id=None, method='getByText', arguments=['danh07emptygr']), ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[7]/td[2]', description=\"A 'danh07emptygr' Group Mailbox entry in the backup list.\", backend_node_id=None, method='getByText', arguments=['danh07emptygr']), ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[8]/td[2]', description=\"A 'danh07emptygr' Group Mailbox entry in the backup list.\", backend_node_id=None, method='getByText', arguments=['danh07emptygr']), ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[9]/td[2]', description=\"A 'danh07emptygr' Group Mailbox entry in the backup list.\", backend_node_id=None, method='getByText', arguments=['danh07emptygr']), ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[10]/td[2]', description=\"A 'danh07emptygr' Group Mailbox entry in the backup list.\", backend_node_id=None, method='getByText', arguments=['danh07emptygr']), ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[11]/td[2]', description=\"A 'danh07emptygr' Group Mailbox entry in the backup list.\", backend_node_id=None, method='getByText', arguments=['danh07emptygr']), ObserveResult(selector='xpath=/html/body[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[12]/td[2]', description=\"A 'danh07emptygr' Group Mailbox entry in the backup list.\", backend_node_id=None, method='getByText', arguments=['danh07emptygr'])]",
+    "screenshot_before": "./storage/screenshots/step_033_before.png",
+    "screenshot_after": "./storage/screenshots/step_033_after.png"
   }
 ]

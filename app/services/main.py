@@ -17,23 +17,22 @@ class MainService:
         self.test_case = None
         
 
-    async def process(self, mode="ai"):
+    async def process(self, mode="ai",test_case="./storage/testcase/create_backup_job_365.txt"):
         logger.debug(f"Start QA automation, mode={mode}")
-
-        # Load steps from steps.txt
-        steps_file = "./storage/steps.txt"
         
-        logger.info(f"Loading steps from {steps_file}")
-        with open(steps_file, "r", encoding="utf-8") as f:
+       
+        test_case = f"./storage/testcase/{test_case}"
+        logger.info(f"Loading steps from {test_case}")
+        with open(test_case, "r", encoding="utf-8") as f:
             steps_text = f.read()
 
         # use test_case.py to parse steps.txt
 
-        self.test_case = load_testcase(steps_file)
+        self.test_case = load_testcase(test_case)
         action_steps = [step.text for step in self.test_case.steps]
         print(action_steps)
 
-        logger.info(f"Loaded {len(action_steps)} action steps from {steps_file}")
+        logger.info(f"Loaded {len(action_steps)} action steps from {test_case}")
 
         # Load test data
         data_path = "./storage/data.json"
@@ -59,7 +58,8 @@ class MainService:
         })
 
         # Open your main app page
-        await page.goto("https://127.0.0.1:4443/")
+        url = data_vars.get("url", "https://127.0.0.1:4443/")
+        await page.goto(url)
         logger.info("Initial page loaded")
 
         # Mode: REPLAY (без агента)
@@ -448,10 +448,7 @@ Do not proceed to any other steps.
 
         while (time.time() - start) * 1000 < timeout_ms:
             try:
-                result = await page.observe(f"""
-                Find the job status text that shows the current execution state (e.g., "Running (00:00:07)", "Success", "Failed").
-                Return the text content of the status element.
-                """)
+                result = await page.observe(step)
             except Exception as e:
                 logger.debug(f"observe failed: {e}; retrying...")
                 await asyncio.sleep(interval_ms / 1000)
